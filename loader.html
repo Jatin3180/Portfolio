@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --color: black;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background: var(--color);
+            
+        }
+        .center{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+        .ring{
+            position: absolute; 
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            animation: ring 2s linear infinite;
+
+        }
+
+        .ring:before{
+            position: relative;
+            content: ' ';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(255,255,255,.3);
+
+
+        }
+        @keyframes ring { 
+            0%{
+                transform: rotate(0deg);
+                box-shadow: 1px 5px 2px orange;
+            }
+            50%{
+                transform: rotate(180deg);
+                box-shadow: 1px 5px 2px green;
+            }
+            100%{
+                transform: rotate(360deg);
+                box-shadow: 1px 5px 2px red;
+            }
+        }
+       
+        span{
+            color: azure;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 200px;
+            animation: text 3s ease-in-out infinite;
+
+        }
+
+        @keyframes text{
+            50%{
+                color: aqua;
+            }
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="ring">
+           
+        </div>
+        <span>loading...</span>
+    </div>
+</body>
+</html>
