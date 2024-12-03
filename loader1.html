@@ -65,28 +65,7 @@
             color: #606060;
         }
 
-        /* Container for the progress bar */
-    .progress-container {
-        width: 100%;
-        background-color: #f3f3f3;
-        border-radius: 25px;
-        margin: 50px 0;
-        padding: 3px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-  
-      /* Inner progress bar */
-      .progress-bar {
-        width: 0%;
-        height: 30px;
-        background-color: #4caf50;
-        text-align: center;
-        line-height: 30px;
-        color: white;
-        border-radius: 20px;
-        font-weight: bold;
-        transition: all 2s ease-in-out; /* Smooth animation */
-      }
+      
     </style>
 
 
@@ -107,9 +86,7 @@
         <span class="text">Javascript</span>
     </div>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="progress-bar"></div>
-      </div>
+   
     <script>
         let circularProgress = document.querySelector(".circular-progress"),
             progressValue = document.querySelector(".progress-value");
@@ -122,7 +99,7 @@
 
             const animateProgress = () => {
         let progress = setInterval(() => {
-            progressStartValue++;
+            progressStartValue++; 
 
             progressValue.textContent = `${progressStartValue}%`
             circularProgress.style.background = `conic-gradient(#deae67 ${progressStartValue * 3.6}deg, #ededed 0deg)`
@@ -133,20 +110,20 @@
         }, speed);
     }
 
-      function startProgress() {
-      const progressBar = document.getElementById("progress-bar");
-      let width = 0;
+    //   function startProgress() {
+    //   const progressBar = document.getElementById("progress-bar");
+    //   let width = 0;
       
-      const interval = setInterval(() => {
-        if (width >= 70) {
-          clearInterval(interval); // Stop when the width reaches 100%
-        } else {
-          width++;
-          progressBar.style.width = width + "%";
-         // Update the displayed percentage
-        }
-      }, 90); // Progress increase every 50ms for smooth animation
-    }
+    //   const interval = setInterval(() => {
+    //     if (width >= 70) {
+    //       clearInterval(interval); // Stop when the width reaches 100%
+    //     } else {
+    //       width++;
+    //       progressBar.style.width = width + "%";
+    //      // Update the displayed percentage
+    //     }
+    //   }, 90); // Progress increase every 50ms for smooth animation
+    // }
 
 
          // Intersection Observer setup
@@ -155,7 +132,7 @@
              entries.forEach(entry => {
                  if (entry.isIntersecting) {
                      animateProgress();
-                     startProgress();
+                    //  startProgress();
                      observer.unobserve(progressContainer); // Stop observing after animation starts
                  }
              });
@@ -164,6 +141,9 @@
          });
  
          observer.observe(progressContainer);
+
+
+        //  Viewport  -- 
     </script>
 
 
