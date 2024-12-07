@@ -6,3 +6,13 @@ labels.forEach(label => {
         .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
         .join('')
 })
+
+// Email   -- E
+
+// <!-- <label>
+// <span style="transition-delay: 0ms">E</span>
+//   <span style="transition-delay: 50ms">m</span>
+//   <span style="transition-delay: 100ms">a</span>
+//   <span style="transition-delay: 150ms">i</span>
+//   <span style="transition-delay: 200ms">l</span>
+// </label> -->
