@@ -84,9 +84,11 @@ form.addEventListener('submit', (e) => {
     const user = search.value
 
     if(user) {
-        getUser(user)
+       getUser(user);
 
         search.value = ''
     }
 })
 
+
+// XMLhttpRequest()  -- to handle http request
