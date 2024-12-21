@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
+
 <html lang="en">
 
 <head>
@@ -16,7 +16,6 @@
 
         body {
             height: 100vh;
-          
             align-items: center;
             justify-content: center;
         }
@@ -64,8 +63,6 @@
             font-weight: 500;
             color: #606060;
         }
-
-      
     </style>
 
 
@@ -74,10 +71,8 @@
 
 <body>
 
-    <h1>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus voluptates molestias, totam, placeat vel rem qui sit alias, impedit earum quasi recusandae deleniti amet accusamus fugiat repellat quibusdam nobis numquam. Sapiente molestiae sit inventore dolore vero nulla dolores? Beatae eos assumenda error ad obcaecati cum quasi, corrupti similique illum, repellendus laboriosam aliquam, sit aperiam sapiente iste doloribus! Pariatur, recusandae! Inventore amet in atque, ad itaque temporibus consectetur autem, et quis magni sed nam rerum iusto, qui doloribus veritatis numquam dicta. Repellat velit magni tempore similique eos deleniti quidem quia! Quam, deleniti! Debitis ducimus dolorum dolores earum incidunt excepturi? Natus enim dolorem sed ea eaque accusantium aut voluptatum! Eum qui ad reprehenderit temporibus vel eveniet labore exercitationem vitae consequatur dicta eos natus maiores, quis officia iusto atque laborum deleniti esse ut nam, error magni? Debitis similique magni illo quas et praesentium vel cupiditate tempora odit aspernatur harum nam fugit obcaecati voluptate facilis ratione sunt a asperiores, fuga atque suscipit numquam explicabo. A iste dicta quasi, eius ea tempore quod doloribus modi cumque cupiditate esse optio ex! Dolores, doloribus rerum voluptates dolorem laudantium, aut saepe accusamus vel illo deleniti excepturi deserunt! Vitae non est odio exercitationem ullam, dignissimos quam totam esse dolore nulla eligendi animi numquam explicabo, soluta magni ipsam, voluptate quibusdam perspiciatis. Dolore voluptates veritatis alias natus voluptatum, asperiores inventore aut expedita nulla eos iusto quas magni ex atque perspiciatis sed ut dolorum deleniti. Odit aspernatur at a, ab magni assumenda fuga voluptatibus et laborum deserunt minima debitis laboriosam soluta, sit nostrum natus explicabo odio quos illum illo, accusamus distinctio maiores. Vitae voluptates dignissimos illo perferendis quia, blanditiis ipsa possimus soluta? Nulla ullam accusamus voluptate, a aut quos, delectus, nostrum hic inventore consequatur obcaecati iusto ipsam animi harum quod nobis voluptates repellendus aliquid quasi! Eaque esse quia perspiciatis, quaerat aliquam repellendus ipsa fuga soluta tenetur accusamus error cum voluptatibus nulla amet cupiditate nobis consequuntur reiciendis modi magni? Vel, consequatur! Dolorem nihil aperiam reprehenderit eveniet! Commodi eum, architecto sit, minima voluptate itaque similique velit sed placeat modi fugiat vero. Quaerat architecto dolor quidem! Praesentium voluptatibus voluptates non rem architecto, quam culpa facere maiores tenetur tempore beatae nisi, corrupti cum nulla obcaecati eum? Sapiente voluptate asperiores reprehenderit quam, ipsam tempora itaque, molestiae libero provident expedita quidem accusantium eum saepe id fugiat dolore dolor eligendi ut necessitatibus debitis iusto quis? Dignissimos autem dolores vel esse illo natus perferendis quibusdam tempora, veritatis magni sequi placeat numquam maiores unde accusamus voluptatum dolorum praesentium quod repellendus culpa ab, et ratione, doloribus molestias? Provident perferendis repellendus esse quam assumenda laudantium consequuntur illo magni dicta dolorem inventore maxime delectus ipsum vitae numquam soluta minima cupiditate voluptate vel, in, enim quibusdam. Asperiores quo dolores harum nostrum, iste obcaecati praesentium libero!
-    </h1>
-    
+
+
     <div class="container" id="progressContainer">
         <div class="circular-progress">
             <span class="progress-value">0%</span>
@@ -86,8 +81,9 @@
         <span class="text">Javascript</span>
     </div>
 
-   
+
     <script>
+
         let circularProgress = document.querySelector(".circular-progress"),
             progressValue = document.querySelector(".progress-value");
 
@@ -97,50 +93,50 @@
 
 
 
-            const animateProgress = () => {
-        let progress = setInterval(() => {
-            progressStartValue++; 
+        const animateProgress = () => {
+            let progress = setInterval(() => {
+                progressStartValue++;
 
-            progressValue.textContent = `${progressStartValue}%`
-            circularProgress.style.background = `conic-gradient(#deae67 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+                progressValue.textContent = `${progressStartValue}%`
+                circularProgress.style.background = `conic-gradient(#deae67 ${progressStartValue * 3.6}deg, #ededed 0deg)`
 
-            if (progressStartValue == progressEndValue) {
-                clearInterval(progress);
-            }
-        }, speed);
-    }
+                if (progressStartValue == progressEndValue) {
+                    clearInterval(progress);
+                }
+            }, speed);
+        }
 
-    //   function startProgress() {
-    //   const progressBar = document.getElementById("progress-bar");
-    //   let width = 0;
-      
-    //   const interval = setInterval(() => {
-    //     if (width >= 70) {
-    //       clearInterval(interval); // Stop when the width reaches 100%
-    //     } else {
-    //       width++;
-    //       progressBar.style.width = width + "%";
-    //      // Update the displayed percentage
-    //     }
-    //   }, 90); // Progress increase every 50ms for smooth animation
-    // }
+        //   function startProgress() {
+        //   const progressBar = document.getElementById("progress-bar");
+        //   let width = 0;
+
+        //   const interval = setInterval(() => {
+        //     if (width >= 70) {
+        //       clearInterval(interval); // Stop when the width reaches 100%
+        //     } else {
+        //       width++;
+        //       progressBar.style.width = width + "%";
+        //      // Update the displayed percentage
+        //     }
+        //   }, 90); // Progress increase every 50ms for smooth animation
+        // }
 
 
-         // Intersection Observer setup
-         const progressContainer = document.getElementById('progressContainer');
-         const observer = new IntersectionObserver((entries) => {
-             entries.forEach(entry => {
-                 if (entry.isIntersecting) {
-                     animateProgress();
+        // Intersection Observer setup
+        const progressContainer = document.getElementById('progressContainer');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProgress();
                     //  startProgress();
-                     observer.unobserve(progressContainer); // Stop observing after animation starts
-                 }
-             });
-         }, {
-             threshold: 0.5 // Adjust this threshold based on when you want to trigger (0 to 1)
-         });
- 
-         observer.observe(progressContainer);
+                    observer.unobserve(progressContainer); // Stop observing after animation starts
+                }
+            });
+        }, {
+            threshold: 0.5 // Adjust this threshold based on when you want to trigger (0 to 1)
+        });
+
+        observer.observe(progressContainer);
 
 
         //  Viewport  -- 
